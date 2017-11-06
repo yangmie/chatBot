@@ -263,8 +263,43 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         return [UIImage imageNamed:@"raku3.png"];
     } else if ([string containsString:@"老婆"] || [string containsString:@"腦皮"]) {
         return [UIImage imageNamed:@"raku4.png"];
+    } else if ([string containsString:@"欸欸"]) {
+        return [UIImage imageNamed:@"bird11.png"];
+    } else if ([string containsString:@"欸"]) {
+        return [UIImage imageNamed:@"bird8.png"];
+    } else if ([string containsString:@"天阿"] || [string containsString:@"天啊"]) {
+        return [UIImage imageNamed:@"bird5.png"];
+    } else if ([string containsString:@"= ="]) {
+        return [UIImage imageNamed:@"rabbit3.png"];
+    } else if ([string containsString:@"慘"]) {
+        return [UIImage imageNamed:@"rabbit5.png"];
+    } else if ([string containsString:@"在幹嘛"] || [string containsString:@"你在哪"]) {
+        return [UIImage imageNamed:@"bird10.png"];
+    } else if ([string containsString:@"我要去"]) {
+        return [UIImage imageNamed:@"bird3.png"];
+    } else if ([string containsString:@"瘋"]) {
+        return [UIImage imageNamed:@"bird9.png"];
+    } else if ([string containsString:@"崩潰"]) {
+        return [UIImage imageNamed:@"bird11.png"];
+    } else if ([string containsString:@"==="]) {
+        return [UIImage imageNamed:@"bird1.png"];
+    } else if ([string containsString:@"我跟你說"]) {
+        return [UIImage imageNamed:@"bird7.png"];
+    } else if ([string containsString:@"生氣"]) {
+        return [UIImage imageNamed:@"bird4.png"];
+    } else if ([string containsString:@"睡"]) {
+        return [UIImage imageNamed:@"rabbit1.png"];
     } else {
-        return @"結餘\n在幹嘛";
+        int index = arc4random() % 2;
+        if (index == 0) {
+            NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png"];
+            int imageIndex = arc4random() % imageArray.count;
+            return [UIImage imageNamed:imageArray[imageIndex]];
+        } else {
+            NSArray *stringArray = @[@"結餘\n在幹嘛", @"活該", @"可ㄆ", @"結餘 是不是在搞", @"抓到", @"已經沒有那個必要了", @"跟你媽講", @"離ㄆ", @"扯", @"😯", @"喝"];
+            int imageIndex = arc4random() % stringArray.count;
+            return stringArray[imageIndex];
+        }
     }
 }
 
