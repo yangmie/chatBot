@@ -42,12 +42,12 @@
 
     self.title = self.toUser.name;
 
-//    UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage @""]
-//                                                                style:UIBarButtonItemStylePlain
-//                                                               target:self
-//                                                               action:@selector(dismissVC)];
-//    backBtn.tintColor = [UIColor blackColor];
-//    self.navigationItem.leftBarButtonItem = backBtn;
+    UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backkey"]
+                                                                style:UIBarButtonItemStylePlain
+                                                               target:self
+                                                               action:@selector(dismissVC)];
+    backBtn.tintColor = [UIColor blackColor];
+    self.navigationItem.leftBarButtonItem = backBtn;
 
     self.adapter.collectionView = self.collectionView;
     self.adapter.dataSource = self;
