@@ -63,7 +63,7 @@
     
     [cell.imageView setImage:[UIImage imageNamed:user.imageName]];
 
-//    cell.dateLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:self.message.createdAt];
+    cell.dateLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:self.message.createdAt];
 
     [cell setNeedsLayout];
     [cell layoutIfNeeded];

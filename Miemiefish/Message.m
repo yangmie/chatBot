@@ -10,20 +10,32 @@
 
 @implementation Message
 
-- (instancetype)initWithMessage:(NSString *)messageString {
+- (instancetype)initWithMessage:(NSString *)messageString user:(User *)user {
     self = [super init];
     if (self) {
         _messageString = messageString;
         _createdAt = [NSDate new];
+        _user = user;
     }
     return self;
 }
 
-- (instancetype)initWithImage:(NSString *)imageString {
+- (instancetype)initWithImage:(NSString *)imageString user:(User *)user {
     self = [super init];
     if (self) {
         _iamgeName = imageString;
         _createdAt = [NSDate new];
+        _user = user;
+    }
+    return self;
+}
+
+- (instancetype)initWithImageFile:(UIImage *)image user:(User *)user {
+    self = [super init];
+    if (self) {
+        _iamgeFile = image;
+        _createdAt = [NSDate new];
+        _user = user;
     }
     return self;
 }

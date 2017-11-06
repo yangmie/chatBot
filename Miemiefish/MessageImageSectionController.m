@@ -52,9 +52,13 @@
     }
 
     [cell.imageView setImage:[UIImage imageNamed:user.imageName]];
-    [cell.photoView setImage:[UIImage imageNamed:self.message.iamgeName]];
 
-//    cell.dateLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:self.message.createdAt];
+    if (self.message.iamgeFile) {
+        [cell.photoView setImage:self.message.iamgeFile];
+    } else {
+        [cell.photoView setImage:[UIImage imageNamed:self.message.iamgeName]];
+    }
+    cell.dateLabel.text = [[JSQMessagesTimestampFormatter sharedFormatter] timeForDate:self.message.createdAt];
 
     return cell;
 }

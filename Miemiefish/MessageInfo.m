@@ -12,15 +12,16 @@
 
 - (instancetype)initWithMessage:(Message *)message {
     if (self = [super init]) {
-        self.message = message;
+        _message = message;
+        _date = [NSDate new];
     }
     return self;
 }
 
 - (instancetype)initWithDate:(NSDate *)date {
     if (self = [super init]) {
-        self.message = [[Message alloc] initWithMessage:@"date message"];
-        self.date = date;
+        _message = [[Message alloc] initWithMessage:@"date message" user:nil];
+        _date = [NSDate new];
     }
     return self;
 }

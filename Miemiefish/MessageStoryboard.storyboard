@@ -58,7 +58,7 @@
                                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Account_avator" translatesAutoresizingMaskIntoConstraints="NO" id="N2I-Gy-clN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2I-Gy-clN">
                                                     <rect key="frame" x="25" y="19" width="42" height="41.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="N2I-Gy-clN" secondAttribute="height" id="kY4-dF-yTe"/>
@@ -431,7 +431,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="veP-ZN-Jl9" secondAttribute="height" multiplier="30:25" id="4kG-g9-Gx6"/>
                                         </constraints>
-                                        <state key="normal" image="IMG_menutalk_photo"/>
+                                        <state key="normal" image="imgMenutalkPhoto.png"/>
                                         <connections>
                                             <action selector="photoButtonAction:" destination="OuH-hE-3ub" eventType="touchUpInside" id="3rx-TW-xlh"/>
                                         </connections>
@@ -492,7 +492,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IQLayoutGuideConstraint" destination="3s0-nB-R2r" id="ANl-cg-5s1"/>
+                        <outlet property="IQLayoutGuideConstraint" destination="3s0-nB-R2r" id="5AZ-Yd-007"/>
                         <outlet property="bottomView" destination="H11-NJ-0bW" id="BOv-sH-mXC"/>
                         <outlet property="collectionView" destination="Kky-BZ-pv5" id="bzr-HM-lBY"/>
                         <outlet property="photoButton" destination="veP-ZN-Jl9" id="ay3-BU-eBq"/>
@@ -506,7 +506,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Account_avator" width="92" height="92"/>
-        <image name="IMG_menutalk_photo" width="30" height="25"/>
+        <image name="imgMenutalkPhoto.png" width="90" height="75"/>
     </resources>
 </document>

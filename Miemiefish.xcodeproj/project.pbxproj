@@ -48,6 +48,8 @@
 		FE9898751FB014F0005986F4 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898661FB014F0005986F4 /* SVWebViewControllerActivity.m */; };
 		FE9898771FB015F9005986F4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9898761FB015CB005986F4 /* MobileCoreServices.framework */; };
 		FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE9898791FB01BB4005986F4 /* yangmie.jpg */; };
+		FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */; };
+		FE98987F1FB02836005986F4 /* UIImage+MENU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98987E1FB02836005986F4 /* UIImage+MENU.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,9 @@
 		FE9898681FB014F0005986F4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		FE9898761FB015CB005986F4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FE9898791FB01BB4005986F4 /* yangmie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yangmie.jpg; sourceTree = "<group>"; };
+		FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgMenutalkPhoto.png; sourceTree = "<group>"; };
+		FE98987D1FB02835005986F4 /* UIImage+MENU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MENU.h"; sourceTree = "<group>"; };
+		FE98987E1FB02836005986F4 /* UIImage+MENU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MENU.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +226,8 @@
 				FE9898331FB00F7C005986F4 /* Message.h */,
 				FE9898341FB00F7C005986F4 /* Message.m */,
 				FE9898311FB00A0C005986F4 /* UIColor+MENU.h */,
+				FE98987D1FB02835005986F4 /* UIImage+MENU.h */,
+				FE98987E1FB02836005986F4 /* UIImage+MENU.m */,
 				FE9898301FB00A0C005986F4 /* UIColor+MENU.m */,
 				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
 				FE9898011FB00241005986F4 /* Info.plist */,
@@ -302,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				FE9898791FB01BB4005986F4 /* yangmie.jpg */,
+				FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -388,6 +396,7 @@
 				FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */,
 				FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */,
 				FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
+				FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +443,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle",
 				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib",
 				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.xib",
@@ -472,6 +482,7 @@
 				FE9898731FB014F0005986F4 /* SVWebViewControllerActivitySafari.m in Sources */,
 				FE9898201FB002C4005986F4 /* MessageTextCell.m in Sources */,
 				FE9898351FB00F7C005986F4 /* Message.m in Sources */,
+				FE98987F1FB02836005986F4 /* UIImage+MENU.m in Sources */,
 				FE9898441FB010F6005986F4 /* JTSImageInfo.m in Sources */,
 				FE9898321FB00A0C005986F4 /* UIColor+MENU.m in Sources */,
 				FE9898471FB010F6005986F4 /* UIApplication+JTSImageViewController.m in Sources */,

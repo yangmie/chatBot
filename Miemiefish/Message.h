@@ -6,6 +6,7 @@
 //  Copyright © 2017年 楊育宗. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "User.h"
 
@@ -13,10 +14,12 @@
 
 @property (nonatomic, strong) NSString *messageString;
 @property (nonatomic, strong) NSString *iamgeName;
+@property (nonatomic) UIImage *iamgeFile;
 @property (nonatomic, strong) User *user;
 @property (nonatomic, strong) NSDate *createdAt;
 
-- (instancetype)initWithMessage:(NSString *)messageString;
-- (instancetype)initWithImage:(NSString *)imageString;
+- (instancetype)initWithMessage:(NSString *)messageString user:(User *)user;
+- (instancetype)initWithImage:(NSString *)imageString user:(User *)user;
+- (instancetype)initWithImageFile:(UIImage *)image user:(User *)user;
 
 @end

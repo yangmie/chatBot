@@ -16,6 +16,9 @@
 #import "UIColor+MENU.h"
 #import "Constants.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "IQKeyboardManager.h"
+#import "UIImage+MENU.h"
+#import "UIAlertController+Blocks.h"
 
 @interface MessageViewController ()
 
@@ -75,7 +78,11 @@
 
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 10.f*mainRatio, 0);
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshLayout) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshLayout) name:UIKeyboardDidHideNotification object:nil];
+
     self.messages = [[NSMutableArray alloc] init];
+    [self loadMessages];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -107,123 +114,29 @@
 
 #define MenuMessagesQueryLimit 20
 
-//- (void)loadMessageFromParseWithSkip:(BOOL)isSkip {
-//    if (self.isLoading) {
-//        return;
-//    }
-//
-//    self.isLoading = YES;
-//    PFQuery *fromUserQuery = [PFQuery queryWithClassName:MenuMessageKeyClass];
-//    [fromUserQuery whereKey:MenuMessageKeyFromUser equalTo:[PFUser currentUser]];
-//    [fromUserQuery whereKey:MenuMessageKeyToUser equalTo:self.toUser];
-//
-//    PFQuery *toUserQuery = [PFQuery queryWithClassName:MenuMessageKeyClass];
-//    [toUserQuery whereKey:MenuMessageKeyToUser equalTo:[PFUser currentUser]];
-//    [toUserQuery whereKey:MenuMessageKeyFromUser equalTo:self.toUser];
-//
-//    PFQuery *settingQuery = [PFQuery queryWithClassName:MenuTalkSettingsKeyClass];
-//    [settingQuery whereKey:MenuTalkSettingsKeyFromUser equalTo:[PFUser currentUser]];
-//    [settingQuery whereKey:MenuTalkSettingsKeyType equalTo:@"block"];
-//
-//    PFQuery *query = [PFQuery orQueryWithSubqueries:@[fromUserQuery, toUserQuery]];
-//    [query includeKey:MenuMessageKeyFromUser];
-//    [query includeKey:MenuMessageKeyToUser];
-//    [query setLimit:MenuMessagesQueryLimit];
-//    if (self.blocked) {
-//        [query whereKey:MenuMessageKeyFromUser doesNotMatchKey:MenuTalkSettingsKeyToUser inQuery:settingQuery];
-//        [query whereKey:MenuMessageKeyToUser doesNotMatchKey:MenuTalkSettingsKeyToUser inQuery:settingQuery];
-//    }
-//    NSInteger skip = 0;
-//    for (MessageInfo *m in self.messages) {
-//        if (!m.date) {
-//            skip += 1;
-//        }
-//    }
-//
-//    if (isSkip) query.skip = skip;
-//    [query orderByDescending:MenuMessageKeyCreatedAt];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *messages, NSError *error) {
-//        if (!error) {
-//            if (messages.count == 0 && !isSkip) {
-//                if (self.blocked) {
-//                    [self.messages removeAllObjects];
-//                    [self.adapter performUpdatesAnimated:YES completion:nil];
-//                } else if ([self.toUser.objectId isEqualToString:menuTaiwanID]) {
-//                    PFObject *messageObj = [PFObject objectWithClassName:MenuMessageKeyClass];
-//                    [messageObj setValue:[PFUser currentUser] forKey:MenuMessageKeyToUser];
-//                    [messageObj setValue:self.toUser forKey:MenuMessageKeyFromUser];
-//                    [messageObj setValue:kLocaleMenutalkWelcomeMessage forKey:MenuMessageKeyMessage];
-//                    [messageObj saveInBackground];
-//                }
-//                self.isLoading = NO;
-//
-//
-//            } else if (messages.count > 0) {
-//
-//                NSInteger previousCount = self.messages.count;
-//                if (!isSkip) {
-//                    [self.messages removeAllObjects];
-//                }
-//
-//                for (PFObject *message in messages) {
-//
-//                    MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
-//
-//                    if (![self isMessageExisted:mInfo]) {
-//                        [self.messages addObject:mInfo];
-//                    }
-//                }
-//                self.messages = [[self.messages sortedArrayUsingFunction:recentMessagesSort context:nil] mutableCopy];
-//
-//                MessageInfo *lastInfo = [self.messages lastObject];
-//                PFObject *lastMessage = lastInfo.message;
-//                if ([lastMessage[MenuMessageKeyToUser] isEqualToUser:[PFUser currentUser]]) {
-//                    [PFCloud callFunctionInBackground:@"setMessageRead" withParameters:@{@"messageId":lastMessage.objectId}];
-//                }
-//
-//                if (self.messages.count > 1) {
-//                    for (NSInteger i = self.messages.count - 1; i > 0; i --) {
-//                        MessageInfo *previousMessage = self.messages[i-1];
-//                        MessageInfo *currentMessage = self.messages[i];
-//
-//                        if (previousMessage.date || currentMessage.date) {
-//                            continue;
-//                        }
-//
-//                        NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:currentMessage.message.createdAt];
-//                        NSDateComponents *previousComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:previousMessage.message.createdAt];
-//
-//                        if ([components day] != [previousComponents day]) {
-//                            MessageInfo *m = [[MessageInfo alloc] initWithDate:currentMessage.message.createdAt];
-//                            [self.messages insertObject:m atIndex:i];
-//                        }
-//                    }
-//                } else if (self.messages.count == 1) {
-//                    MessageInfo *currentMessage = self.messages[0];
-//                    if (!currentMessage.date) {
-//                        MessageInfo *m = [[MessageInfo alloc] initWithDate:currentMessage.message.createdAt];
-//
-//                        [self.messages insertObject:m atIndex:0];
-//
-//                    }
-//                }
-//
-//                [self.adapter performUpdatesAnimated:NO completion:^(BOOL finished) {
-//                    if (finished) {
-//                        if (!isSkip) {
-//                            [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
-//                        } else {
-//                            [self.adapter scrollToObject:self.messages[self.messages.count - previousCount - 1] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionNone animated:NO];
-//                        }
-//
-//                        self.isLoading = NO;
-//                    }
-//                }];
-//            }
-//
-//        }
-//    }];
-//}
+- (void)loadMessages {
+
+    NSMutableArray *messages = [NSMutableArray new];
+    Message *message = [[Message alloc] initWithMessage:@"結餘" user:self.toUser];
+    [messages addObject:message];
+
+    message = [[Message alloc] initWithMessage:@"在幹嘛" user:self.toUser];
+    [messages addObject:message];
+
+    for (Message *message in messages) {
+        MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+        [self.messages addObject:mInfo];
+    }
+
+    self.messages = [[self.messages sortedArrayUsingFunction:recentMessagesSort context:nil] mutableCopy];
+
+    [self.adapter performUpdatesAnimated:NO completion:^(BOOL finished) {
+        if (finished) {
+            [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
+            self.isLoading = NO;
+        }
+    }];
+}
 
 NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void *context) {
     NSDate *date1 = message1.message.createdAt;
@@ -247,18 +160,14 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 }
 
 - (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
-    if (((MessageInfo *)object).date) {
-        MessageDateSectionController *messageDateSectionController = [[MessageDateSectionController alloc] init];
-        return messageDateSectionController;
+
+    Message *message = ((MessageInfo *)object).message;
+    if (message.messageString.length > 0) {
+        MessageTextSectionController *messageTextSectionController = [[MessageTextSectionController alloc] init];
+        return messageTextSectionController;
     } else {
-        Message *message = ((MessageInfo *)object).message;
-        if (message.messageString.length > 0) {
-            MessageTextSectionController *messageTextSectionController = [[MessageTextSectionController alloc] init];
-            return messageTextSectionController;
-        } else {
-            MessageImageSectionController *messageImageSectionController = [[MessageImageSectionController alloc] init];
-            return messageImageSectionController;
-        }
+        MessageImageSectionController *messageImageSectionController = [[MessageImageSectionController alloc] init];
+        return messageImageSectionController;
     }
 }
 
@@ -294,36 +203,18 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         return;
     }
 
-//    PFObject *messageObj = [PFObject objectWithClassName:MenuMessageKeyClass];
-//    [messageObj setValue:[PFUser currentUser] forKey:MenuMessageKeyFromUser];
-//    [messageObj setValue:self.toUser forKey:MenuMessageKeyToUser];
-//    [messageObj setValue:self.textView.text forKey:MenuMessageKeyMessage];
-//
-//    MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:messageObj];
-//
-//    [self.messages addObject:mInfo];
-//
-//    [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
-//        if (finished) {
-//            [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
-//
-//            [messageObj saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
-//                if (!error) {
-//
-//                    for (NSInteger i = 0; i < self.messages.count; i ++) {
-//                        MessageInfo *m = self.messages[i];
-//                        if ([m.message isEqualToObject:messageObj]) {
-//                            MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:messageObj];
-//                            [self.messages replaceObjectAtIndex:i withObject:mInfo];
-//                            [self.adapter reloadObjects:@[mInfo]];
-//                            break;
-//                        }
-//                    }
-//                }
-//            }];
-//
-//        }
-//    }];
+    User *miemiefish = [[User alloc] initWithUserName:@"miemiefish" image:@"miemiefish.jpg"];
+    Message *message = [[Message alloc] initWithMessage:self.textView.text user:miemiefish];
+    MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+    [self.messages addObject:mInfo];
+
+    [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
+        if (finished) {
+            [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
+
+            [self sendAutuReply];
+        }
+    }];
 
     self.textView.text = @"";
 
@@ -335,6 +226,21 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 
     [self.sendButton setTitleColor:[UIColor colorWithHex:0x333333 alpha:0.5] forState:UIControlStateNormal];
     [self.sendButton setTitleColor:[UIColor colorWithHex:0x333333 alpha:0.5] forState:UIControlStateHighlighted];
+}
+
+- (void)sendAutuReply {
+
+    [NSTimer scheduledTimerWithTimeInterval:1.f repeats:NO block:^(NSTimer * _Nonnull timer) {
+        Message *message = [[Message alloc] initWithMessage:@"敷衍回應" user:self.toUser];
+        MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+        [self.messages addObject:mInfo];
+
+        [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
+            if (finished) {
+                [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
+            }
+        }];
+    }];
 }
 
 - (IBAction)photoButtonAction:(id)sender {
@@ -369,39 +275,32 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
-//    [UIAlertController showAlertInViewController:picker
-//                                       withTitle:nil
-//                                         message:kLocaleMenutalkWarning
-//                               cancelButtonTitle:kLocaleMenutalkCancel
-//                          destructiveButtonTitle:nil
-//                               otherButtonTitles:@[@"確定"]
-//                                        tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex) {
-//                                            if ([action.title isEqualToString:@"確定"]) {
-//                                                [cameraUI dismissViewControllerAnimated:YES completion:nil];
-//
-//                                                UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-//                                                originalImage = [UIImage scaleAndRotateImage:originalImage];
-//
-//                                                PFObject *messageObj = [PFObject objectWithClassName:MenuMessageKeyClass];
-//                                                [messageObj setObject:[PFUser currentUser] forKey:MenuMessageKeyFromUser];
-//                                                [messageObj setObject:self.toUser forKey:MenuMessageKeyToUser];
-//                                                [messageObj setObject:[PFFile fileWithData:UIImagePNGRepresentation(originalImage) contentType:@"image/png"] forKey:MenuMessageKeyImage];
-//                                                [messageObj saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
-//                                                    if (!error) {
-//                                                        MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:messageObj];
-//
-//                                                        [self.messages addObject:mInfo];
-//
-//                                                        [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
-//                                                            if (finished) {
-//                                                                [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
-//                                                            }
-//                                                        }];
-//
-//                                                    }
-//                                                }];
-//                                            }
-//                                        }];
+    [UIAlertController showAlertInViewController:picker
+                                       withTitle:nil
+                                         message:@"確定要傳送這張照片嗎? 他其實根本不會傳給yangmie, 這是一個無用的功能."
+                               cancelButtonTitle:@"取消"
+                          destructiveButtonTitle:nil
+                               otherButtonTitles:@[@"確定"]
+                                        tapBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger buttonIndex) {
+                                            if ([action.title isEqualToString:@"確定"]) {
+                                                [cameraUI dismissViewControllerAnimated:YES completion:nil];
+
+                                                UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+                                                originalImage = [UIImage scaleAndRotateImage:originalImage];
+
+                                                User *miemiefish = [[User alloc] initWithUserName:@"miemiefish" image:@"miemiefish.jpg"];
+                                                Message *message = [[Message alloc] initWithImageFile:originalImage user:miemiefish];
+                                                MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+
+                                                [self.messages addObject:mInfo];
+
+                                                [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
+                                                    if (finished) {
+                                                        [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
+                                                    }
+                                                }];
+                                            }
+                                        }];
 
 }
 
@@ -428,8 +327,6 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 }
 
 - (void)textViewDidBeginEditing:(UITextField *)textView {
-//    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
-
     if ([textView.text isEqualToString:@"輸入訊息..."]) {
         textView.text = @"";
         NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@""];

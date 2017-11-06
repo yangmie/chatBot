@@ -13,5 +13,7 @@ target "Miemiefish" do
 
 pod 'IGListKit'
 pod 'JSQMessagesViewController'
+pod 'IQKeyboardManager'
+pod 'UIAlertController+Blocks'
 
 end

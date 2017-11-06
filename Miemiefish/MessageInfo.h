@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) Message *message;
 @property (nonatomic, strong) NSDate *date;
+
 - (instancetype)initWithMessage:(Message *)message;
 - (instancetype)initWithDate:(NSDate *)date;
 
