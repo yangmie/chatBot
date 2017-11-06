@@ -56,9 +56,9 @@
     User *user = [[User alloc] initWithUserName:@"yangmie" image:@"yangmie.jpg"];
 
     [self.userArray insertObject:user atIndex:0];
-    [self.recentMessages insertObject:@"點我開始聊天" atIndex:0];
+    [self.recentMessages insertObject:@"在幹嘛" atIndex:0];
     [self.unreadMessages insertObject:[NSNumber numberWithBool:YES] atIndex:0];
-    [self.dates insertObject:@"" atIndex:0];
+    [self.dates insertObject:@"2017.11.09" atIndex:0];
 
     [self.tableView reloadData];
 }

@@ -367,7 +367,7 @@
                                                         <constraint firstAttribute="width" secondItem="4zv-VG-3WW" secondAttribute="height" id="g5G-Ch-2fb"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-iX-Jtz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-iX-Jtz">
                                                     <rect key="frame" x="59" y="20" width="210" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Dby-iX-Jtz" secondAttribute="height" multiplier="210:150" id="MxI-2N-y3V"/>

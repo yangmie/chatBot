@@ -24,8 +24,7 @@
 
 @property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic) BOOL isLoading;
-@property (nonatomic) BOOL blocked;
-@property (nonatomic) BOOL muted;
+@property (nonatomic) BOOL finalMessage;
 
 @end
 
@@ -254,6 +253,11 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 }
 
 - (id)generateReplyFromString:(NSString *)string {
+
+    if (self.messages.count > 100 && !self.finalMessage) {
+        self.finalMessage = YES;
+        return @"結餘, 想不到你可以跟機器人玩成這樣\n想必以後是不需要密我本人了\n請直接跟機器人對談即可 :)";
+    }
 
     if ([string containsString:@"阿胖"]) {
         return [UIImage imageNamed:@"raku2.png"];
