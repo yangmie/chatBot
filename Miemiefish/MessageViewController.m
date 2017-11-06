@@ -298,11 +298,11 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
     } else {
         int index = arc4random() % 2;
         if (index == 0) {
-            NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png"];
+            NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png", @"cat1.png", @"cat2.png", @"cat3.png", @"cat4.png", @"cat5.png", @"cat6.png", @"cat7.png", @"cat8.png", @"cat9.png", @"cat10.png", @"cat11.png", @"cat12.png"];
             int imageIndex = arc4random() % imageArray.count;
             return [UIImage imageNamed:imageArray[imageIndex]];
         } else {
-            NSArray *stringArray = @[@"結餘\n在幹嘛", @"活該", @"可ㄆ", @"結餘 是不是在搞", @"抓到", @"已經沒有那個必要了", @"跟你媽講", @"離ㄆ", @"扯", @"😯", @"喝"];
+            NSArray *stringArray = @[@"結餘\n在幹嘛", @"活該", @"可ㄆ", @"結餘 是不是在搞", @"抓到", @"已經沒有那個必要了", @"跟你媽講", @"離ㄆ", @"扯", @"😯", @"喝", @"不行", @"蛤", @"zz", @"不好ㄅ", @"結餘 他媽為什麼還不去睡", @"練琴囉", @"...", @"慘"];
             int imageIndex = arc4random() % stringArray.count;
             return stringArray[imageIndex];
         }
