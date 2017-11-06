@@ -50,6 +50,7 @@
 		FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE9898791FB01BB4005986F4 /* yangmie.jpg */; };
 		FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */; };
 		FE98987F1FB02836005986F4 /* UIImage+MENU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98987E1FB02836005986F4 /* UIImage+MENU.m */; };
+		FE9898841FB035AA005986F4 /* mie.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898831FB035AA005986F4 /* mie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,7 @@
 		FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgMenutalkPhoto.png; sourceTree = "<group>"; };
 		FE98987D1FB02835005986F4 /* UIImage+MENU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MENU.h"; sourceTree = "<group>"; };
 		FE98987E1FB02836005986F4 /* UIImage+MENU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MENU.m"; sourceTree = "<group>"; };
+		FE9898831FB035AA005986F4 /* mie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,9 +193,8 @@
 		FE9897F21FB00241005986F4 /* Miemiefish */ = {
 			isa = PBXGroup;
 			children = (
+				FE9898821FB033EA005986F4 /* library */,
 				FE9898781FB01BA5005986F4 /* Images */,
-				FE9898491FB014F0005986F4 /* SVWebViewController */,
-				FE9898361FB010F6005986F4 /* JTSImageViewController */,
 				FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */,
 				FE98981A1FB002C2005986F4 /* MessageStoryboard.storyboard */,
 				FE98982C1FB00614005986F4 /* Constants.h */,
@@ -229,7 +230,6 @@
 				FE98987D1FB02835005986F4 /* UIImage+MENU.h */,
 				FE98987E1FB02836005986F4 /* UIImage+MENU.m */,
 				FE9898301FB00A0C005986F4 /* UIColor+MENU.m */,
-				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
 				FE9898011FB00241005986F4 /* Info.plist */,
 				FE9898021FB00241005986F4 /* main.m */,
 			);
@@ -267,7 +267,7 @@
 				FE9898581FB014F0005986F4 /* UIActivities */,
 			);
 			name = SVWebViewController;
-			path = Miemiefish/SVWebViewController;
+			path = Miemiefish/library/SVWebViewController;
 			sourceTree = SOURCE_ROOT;
 		};
 		FE9898581FB014F0005986F4 /* UIActivities */ = {
@@ -308,10 +308,21 @@
 		FE9898781FB01BA5005986F4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FE9898831FB035AA005986F4 /* mie.png */,
 				FE9898791FB01BB4005986F4 /* yangmie.jpg */,
 				FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */,
+				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		FE9898821FB033EA005986F4 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898491FB014F0005986F4 /* SVWebViewController */,
+				FE9898361FB010F6005986F4 /* JTSImageViewController */,
+			);
+			path = library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 				FE98986E1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				FE98986B1FB014F0005986F4 /* SVWebViewController.bundle in Resources */,
 				FE9898701FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
+				FE9898841FB035AA005986F4 /* mie.png in Resources */,
 				FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */,
 				FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */,
 				FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
