@@ -7,25 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4F6495FF56F5C60B352D4E6 /* libPods-Miemiefish.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F45900EF2B90B9086A7E5 /* libPods-Miemiefish.a */; };
 		FE9897F51FB00241005986F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F41FB00241005986F4 /* AppDelegate.m */; };
 		FE9897F81FB00241005986F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F71FB00241005986F4 /* ViewController.m */; };
-		FE9897FB1FB00241005986F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9897F91FB00241005986F4 /* Main.storyboard */; };
 		FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9897FC1FB00241005986F4 /* Assets.xcassets */; };
 		FE9898001FB00241005986F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */; };
 		FE9898031FB00241005986F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898021FB00241005986F4 /* main.m */; };
+		FE9898201FB002C4005986F4 /* MessageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898091FB002BF005986F4 /* MessageTextCell.m */; };
+		FE9898211FB002C4005986F4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98980B1FB002BF005986F4 /* MessageViewController.m */; };
+		FE9898221FB002C4005986F4 /* MessageDateSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98980C1FB002C0005986F4 /* MessageDateSectionController.m */; };
+		FE9898241FB002C4005986F4 /* MessageImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898101FB002C0005986F4 /* MessageImageCell.m */; };
+		FE9898251FB002C4005986F4 /* MessageTextSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898121FB002C1005986F4 /* MessageTextSectionController.m */; };
+		FE9898261FB002C4005986F4 /* MessageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898181FB002C2005986F4 /* MessageInfo.m */; };
+		FE9898271FB002C4005986F4 /* MessageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE98981A1FB002C2005986F4 /* MessageStoryboard.storyboard */; };
+		FE9898281FB002C4005986F4 /* MessageListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98981B1FB002C3005986F4 /* MessageListViewController.m */; };
+		FE9898291FB002C4005986F4 /* MessageImageSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98981C1FB002C3005986F4 /* MessageImageSectionController.m */; };
+		FE98982A1FB002C4005986F4 /* MessageListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98981D1FB002C3005986F4 /* MessageListViewCell.m */; };
+		FE98982B1FB002C4005986F4 /* MessageDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98981E1FB002C4005986F4 /* MessageDateCell.m */; };
+		FE98982F1FB007B8005986F4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98982E1FB007B8005986F4 /* User.m */; };
+		FE9898321FB00A0C005986F4 /* UIColor+MENU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898301FB00A0C005986F4 /* UIColor+MENU.m */; };
+		FE9898351FB00F7C005986F4 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898341FB00F7C005986F4 /* Message.m */; };
+		FE9898431FB010F6005986F4 /* JTSAnimatedGIFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898381FB010F6005986F4 /* JTSAnimatedGIFUtility.m */; };
+		FE9898441FB010F6005986F4 /* JTSImageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98983A1FB010F6005986F4 /* JTSImageInfo.m */; };
+		FE9898451FB010F6005986F4 /* JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98983C1FB010F6005986F4 /* JTSImageViewController.m */; };
+		FE9898461FB010F6005986F4 /* JTSSimpleImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98983E1FB010F6005986F4 /* JTSSimpleImageDownloader.m */; };
+		FE9898471FB010F6005986F4 /* UIApplication+JTSImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898401FB010F6005986F4 /* UIApplication+JTSImageViewController.m */; };
+		FE9898481FB010F6005986F4 /* UIImage+JTSImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898421FB010F6005986F4 /* UIImage+JTSImageEffects.m */; };
+		FE9898691FB014F0005986F4 /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE98984A1FB014F0005986F4 /* SVWebViewController.strings */; };
+		FE98986A1FB014F0005986F4 /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898541FB014F0005986F4 /* SVModalWebViewController.m */; };
+		FE98986B1FB014F0005986F4 /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE9898551FB014F0005986F4 /* SVWebViewController.bundle */; };
+		FE98986C1FB014F0005986F4 /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898571FB014F0005986F4 /* SVWebViewController.m */; };
+		FE98986D1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98985A1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad.png */; };
+		FE98986E1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98985B1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png */; };
+		FE98986F1FB014F0005986F4 /* SVWebViewControllerActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98985D1FB014F0005986F4 /* SVWebViewControllerActivityChrome.m */; };
+		FE9898701FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98985E1FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png */; };
+		FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898601FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png */; };
+		FE9898721FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898611FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png */; };
+		FE9898731FB014F0005986F4 /* SVWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898631FB014F0005986F4 /* SVWebViewControllerActivitySafari.m */; };
+		FE9898741FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898641FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png */; };
+		FE9898751FB014F0005986F4 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898661FB014F0005986F4 /* SVWebViewControllerActivity.m */; };
+		FE9898771FB015F9005986F4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9898761FB015CB005986F4 /* MobileCoreServices.framework */; };
+		FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE9898791FB01BB4005986F4 /* yangmie.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		901490995E7825D941A40456 /* Pods-Miemiefish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miemiefish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish.release.xcconfig"; sourceTree = "<group>"; };
+		A6A63356E2439F83E69318D9 /* Pods-Miemiefish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miemiefish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish.debug.xcconfig"; sourceTree = "<group>"; };
+		DF0F45900EF2B90B9086A7E5 /* libPods-Miemiefish.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Miemiefish.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9897F01FB00241005986F4 /* Miemiefish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miemiefish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9897F31FB00241005986F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FE9897F41FB00241005986F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FE9897F61FB00241005986F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FE9897F71FB00241005986F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FE9897FA1FB00241005986F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE9897FC1FB00241005986F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE9897FF1FB00241005986F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE9898011FB00241005986F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9898021FB00241005986F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE9898091FB002BF005986F4 /* MessageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextCell.m; sourceTree = "<group>"; };
+		FE98980A1FB002BF005986F4 /* MessageTextSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTextSectionController.h; sourceTree = "<group>"; };
+		FE98980B1FB002BF005986F4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		FE98980C1FB002C0005986F4 /* MessageDateSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDateSectionController.m; sourceTree = "<group>"; };
+		FE98980D1FB002C0005986F4 /* MessageDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDateCell.h; sourceTree = "<group>"; };
+		FE9898101FB002C0005986F4 /* MessageImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageImageCell.m; sourceTree = "<group>"; };
+		FE9898111FB002C0005986F4 /* MessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageInfo.h; sourceTree = "<group>"; };
+		FE9898121FB002C1005986F4 /* MessageTextSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextSectionController.m; sourceTree = "<group>"; };
+		FE9898131FB002C1005986F4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		FE9898141FB002C1005986F4 /* MessageListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewCell.h; sourceTree = "<group>"; };
+		FE9898151FB002C1005986F4 /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
+		FE9898161FB002C1005986F4 /* MessageImageSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageImageSectionController.h; sourceTree = "<group>"; };
+		FE9898171FB002C2005986F4 /* MessageDateSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDateSectionController.h; sourceTree = "<group>"; };
+		FE9898181FB002C2005986F4 /* MessageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageInfo.m; sourceTree = "<group>"; };
+		FE9898191FB002C2005986F4 /* MessageImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageImageCell.h; sourceTree = "<group>"; };
+		FE98981A1FB002C2005986F4 /* MessageStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessageStoryboard.storyboard; sourceTree = "<group>"; };
+		FE98981B1FB002C3005986F4 /* MessageListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewController.m; sourceTree = "<group>"; };
+		FE98981C1FB002C3005986F4 /* MessageImageSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageImageSectionController.m; sourceTree = "<group>"; };
+		FE98981D1FB002C3005986F4 /* MessageListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListViewCell.m; sourceTree = "<group>"; };
+		FE98981E1FB002C4005986F4 /* MessageDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDateCell.m; sourceTree = "<group>"; };
+		FE98981F1FB002C4005986F4 /* MessageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTextCell.h; sourceTree = "<group>"; };
+		FE98982C1FB00614005986F4 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FE98982D1FB007B8005986F4 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		FE98982E1FB007B8005986F4 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		FE9898301FB00A0C005986F4 /* UIColor+MENU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MENU.m"; sourceTree = "<group>"; };
+		FE9898311FB00A0C005986F4 /* UIColor+MENU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MENU.h"; sourceTree = "<group>"; };
+		FE9898331FB00F7C005986F4 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		FE9898341FB00F7C005986F4 /* Message.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		FE9898371FB010F6005986F4 /* JTSAnimatedGIFUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSAnimatedGIFUtility.h; sourceTree = "<group>"; };
+		FE9898381FB010F6005986F4 /* JTSAnimatedGIFUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSAnimatedGIFUtility.m; sourceTree = "<group>"; };
+		FE9898391FB010F6005986F4 /* JTSImageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageInfo.h; sourceTree = "<group>"; };
+		FE98983A1FB010F6005986F4 /* JTSImageInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageInfo.m; sourceTree = "<group>"; };
+		FE98983B1FB010F6005986F4 /* JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSImageViewController.h; sourceTree = "<group>"; };
+		FE98983C1FB010F6005986F4 /* JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSImageViewController.m; sourceTree = "<group>"; };
+		FE98983D1FB010F6005986F4 /* JTSSimpleImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTSSimpleImageDownloader.h; sourceTree = "<group>"; };
+		FE98983E1FB010F6005986F4 /* JTSSimpleImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTSSimpleImageDownloader.m; sourceTree = "<group>"; };
+		FE98983F1FB010F6005986F4 /* UIApplication+JTSImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+JTSImageViewController.h"; sourceTree = "<group>"; };
+		FE9898401FB010F6005986F4 /* UIApplication+JTSImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+JTSImageViewController.m"; sourceTree = "<group>"; };
+		FE9898411FB010F6005986F4 /* UIImage+JTSImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JTSImageEffects.h"; sourceTree = "<group>"; };
+		FE9898421FB010F6005986F4 /* UIImage+JTSImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JTSImageEffects.m"; sourceTree = "<group>"; };
+		FE98984B1FB014F0005986F4 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE98984C1FB014F0005986F4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE98984D1FB014F0005986F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE98984E1FB014F0005986F4 /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		FE98984F1FB014F0005986F4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE9898501FB014F0005986F4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE9898511FB014F0005986F4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE9898521FB014F0005986F4 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		FE9898531FB014F0005986F4 /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		FE9898541FB014F0005986F4 /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		FE9898551FB014F0005986F4 /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+		FE9898561FB014F0005986F4 /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		FE9898571FB014F0005986F4 /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
+		FE98985A1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad.png"; sourceTree = "<group>"; };
+		FE98985B1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
+		FE98985C1FB014F0005986F4 /* SVWebViewControllerActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivityChrome.h; sourceTree = "<group>"; };
+		FE98985D1FB014F0005986F4 /* SVWebViewControllerActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivityChrome.m; sourceTree = "<group>"; };
+		FE98985E1FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome@2x.png"; sourceTree = "<group>"; };
+		FE9898601FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad.png"; sourceTree = "<group>"; };
+		FE9898611FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
+		FE9898621FB014F0005986F4 /* SVWebViewControllerActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivitySafari.h; sourceTree = "<group>"; };
+		FE9898631FB014F0005986F4 /* SVWebViewControllerActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivitySafari.m; sourceTree = "<group>"; };
+		FE9898641FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari@2x.png"; sourceTree = "<group>"; };
+		FE9898651FB014F0005986F4 /* SVWebViewControllerActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivity.h; sourceTree = "<group>"; };
+		FE9898661FB014F0005986F4 /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
+		FE9898671FB014F0005986F4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		FE9898681FB014F0005986F4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		FE9898761FB015CB005986F4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FE9898791FB01BB4005986F4 /* yangmie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yangmie.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +139,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9898771FB015F9005986F4 /* MobileCoreServices.framework in Frameworks */,
+				E4F6495FF56F5C60B352D4E6 /* libPods-Miemiefish.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38E0BAB34CA05AD6724EF5DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6A63356E2439F83E69318D9 /* Pods-Miemiefish.debug.xcconfig */,
+				901490995E7825D941A40456 /* Pods-Miemiefish.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9B1CCD8D60B80D9EA211370 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898761FB015CB005986F4 /* MobileCoreServices.framework */,
+				DF0F45900EF2B90B9086A7E5 /* libPods-Miemiefish.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE9897E71FB00241005986F4 = {
 			isa = PBXGroup;
 			children = (
 				FE9897F21FB00241005986F4 /* Miemiefish */,
 				FE9897F11FB00241005986F4 /* Products */,
+				38E0BAB34CA05AD6724EF5DB /* Pods */,
+				C9B1CCD8D60B80D9EA211370 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +186,124 @@
 		FE9897F21FB00241005986F4 /* Miemiefish */ = {
 			isa = PBXGroup;
 			children = (
+				FE9898781FB01BA5005986F4 /* Images */,
+				FE9898491FB014F0005986F4 /* SVWebViewController */,
+				FE9898361FB010F6005986F4 /* JTSImageViewController */,
+				FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */,
+				FE98981A1FB002C2005986F4 /* MessageStoryboard.storyboard */,
+				FE98982C1FB00614005986F4 /* Constants.h */,
+				FE98980D1FB002C0005986F4 /* MessageDateCell.h */,
+				FE98981E1FB002C4005986F4 /* MessageDateCell.m */,
+				FE9898171FB002C2005986F4 /* MessageDateSectionController.h */,
+				FE98980C1FB002C0005986F4 /* MessageDateSectionController.m */,
+				FE9898191FB002C2005986F4 /* MessageImageCell.h */,
+				FE9898101FB002C0005986F4 /* MessageImageCell.m */,
+				FE9898161FB002C1005986F4 /* MessageImageSectionController.h */,
+				FE98981C1FB002C3005986F4 /* MessageImageSectionController.m */,
+				FE9898111FB002C0005986F4 /* MessageInfo.h */,
+				FE9898181FB002C2005986F4 /* MessageInfo.m */,
+				FE9898141FB002C1005986F4 /* MessageListViewCell.h */,
+				FE98981D1FB002C3005986F4 /* MessageListViewCell.m */,
+				FE9898151FB002C1005986F4 /* MessageListViewController.h */,
+				FE98981B1FB002C3005986F4 /* MessageListViewController.m */,
+				FE98981F1FB002C4005986F4 /* MessageTextCell.h */,
+				FE9898091FB002BF005986F4 /* MessageTextCell.m */,
+				FE98980A1FB002BF005986F4 /* MessageTextSectionController.h */,
+				FE9898121FB002C1005986F4 /* MessageTextSectionController.m */,
+				FE9898131FB002C1005986F4 /* MessageViewController.h */,
+				FE98980B1FB002BF005986F4 /* MessageViewController.m */,
 				FE9897F31FB00241005986F4 /* AppDelegate.h */,
 				FE9897F41FB00241005986F4 /* AppDelegate.m */,
 				FE9897F61FB00241005986F4 /* ViewController.h */,
 				FE9897F71FB00241005986F4 /* ViewController.m */,
-				FE9897F91FB00241005986F4 /* Main.storyboard */,
+				FE98982D1FB007B8005986F4 /* User.h */,
+				FE98982E1FB007B8005986F4 /* User.m */,
+				FE9898331FB00F7C005986F4 /* Message.h */,
+				FE9898341FB00F7C005986F4 /* Message.m */,
+				FE9898311FB00A0C005986F4 /* UIColor+MENU.h */,
+				FE9898301FB00A0C005986F4 /* UIColor+MENU.m */,
 				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
-				FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */,
 				FE9898011FB00241005986F4 /* Info.plist */,
 				FE9898021FB00241005986F4 /* main.m */,
 			);
 			path = Miemiefish;
+			sourceTree = "<group>";
+		};
+		FE9898361FB010F6005986F4 /* JTSImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898371FB010F6005986F4 /* JTSAnimatedGIFUtility.h */,
+				FE9898381FB010F6005986F4 /* JTSAnimatedGIFUtility.m */,
+				FE9898391FB010F6005986F4 /* JTSImageInfo.h */,
+				FE98983A1FB010F6005986F4 /* JTSImageInfo.m */,
+				FE98983B1FB010F6005986F4 /* JTSImageViewController.h */,
+				FE98983C1FB010F6005986F4 /* JTSImageViewController.m */,
+				FE98983D1FB010F6005986F4 /* JTSSimpleImageDownloader.h */,
+				FE98983E1FB010F6005986F4 /* JTSSimpleImageDownloader.m */,
+				FE98983F1FB010F6005986F4 /* UIApplication+JTSImageViewController.h */,
+				FE9898401FB010F6005986F4 /* UIApplication+JTSImageViewController.m */,
+				FE9898411FB010F6005986F4 /* UIImage+JTSImageEffects.h */,
+				FE9898421FB010F6005986F4 /* UIImage+JTSImageEffects.m */,
+			);
+			path = JTSImageViewController;
+			sourceTree = "<group>";
+		};
+		FE9898491FB014F0005986F4 /* SVWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE98984A1FB014F0005986F4 /* SVWebViewController.strings */,
+				FE9898531FB014F0005986F4 /* SVModalWebViewController.h */,
+				FE9898541FB014F0005986F4 /* SVModalWebViewController.m */,
+				FE9898551FB014F0005986F4 /* SVWebViewController.bundle */,
+				FE9898561FB014F0005986F4 /* SVWebViewController.h */,
+				FE9898571FB014F0005986F4 /* SVWebViewController.m */,
+				FE9898581FB014F0005986F4 /* UIActivities */,
+			);
+			name = SVWebViewController;
+			path = Miemiefish/SVWebViewController;
+			sourceTree = SOURCE_ROOT;
+		};
+		FE9898581FB014F0005986F4 /* UIActivities */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898591FB014F0005986F4 /* Chrome */,
+				FE98985F1FB014F0005986F4 /* Safari */,
+				FE9898651FB014F0005986F4 /* SVWebViewControllerActivity.h */,
+				FE9898661FB014F0005986F4 /* SVWebViewControllerActivity.m */,
+			);
+			path = UIActivities;
+			sourceTree = "<group>";
+		};
+		FE9898591FB014F0005986F4 /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				FE98985A1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad.png */,
+				FE98985B1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png */,
+				FE98985C1FB014F0005986F4 /* SVWebViewControllerActivityChrome.h */,
+				FE98985D1FB014F0005986F4 /* SVWebViewControllerActivityChrome.m */,
+				FE98985E1FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png */,
+			);
+			path = Chrome;
+			sourceTree = "<group>";
+		};
+		FE98985F1FB014F0005986F4 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898601FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png */,
+				FE9898611FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png */,
+				FE9898621FB014F0005986F4 /* SVWebViewControllerActivitySafari.h */,
+				FE9898631FB014F0005986F4 /* SVWebViewControllerActivitySafari.m */,
+				FE9898641FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
+		FE9898781FB01BA5005986F4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FE9898791FB01BB4005986F4 /* yangmie.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +313,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE9898061FB00241005986F4 /* Build configuration list for PBXNativeTarget "Miemiefish" */;
 			buildPhases = (
+				B94A6A9A7D423861CF32B2C1 /* [CP] Check Pods Manifest.lock */,
 				FE9897EC1FB00241005986F4 /* Sources */,
 				FE9897ED1FB00241005986F4 /* Frameworks */,
 				FE9897EE1FB00241005986F4 /* Resources */,
+				C7D741EAED7E6511C499FB67 /* [CP] Embed Pods Frameworks */,
+				DABABFF5EACFA8E3BF15493A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -113,6 +351,15 @@
 			knownRegions = (
 				en,
 				Base,
+				da,
+				de,
+				"es-ES",
+				es,
+				fr,
+				ja,
+				pt,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = FE9897E71FB00241005986F4;
 			productRefGroup = FE9897F11FB00241005986F4 /* Products */;
@@ -130,12 +377,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE9898001FB00241005986F4 /* LaunchScreen.storyboard in Resources */,
+				FE9898691FB014F0005986F4 /* SVWebViewController.strings in Resources */,
+				FE9898271FB002C4005986F4 /* MessageStoryboard.storyboard in Resources */,
+				FE98986D1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
+				FE9898721FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				FE9898741FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
+				FE98986E1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
+				FE98986B1FB014F0005986F4 /* SVWebViewController.bundle in Resources */,
+				FE9898701FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */,
-				FE9897FB1FB00241005986F4 /* Main.storyboard in Resources */,
+				FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */,
+				FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B94A6A9A7D423861CF32B2C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Miemiefish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7D741EAED7E6511C499FB67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DABABFF5EACFA8E3BF15493A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish-resources.sh",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesCollectionViewCellIncoming.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesCollectionViewCellOutgoing.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesLoadEarlierHeaderView.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesToolbarContentView.xib",
+				"${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Views/JSQMessagesTypingIndicatorFooterView.xib",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE9897EC1FB00241005986F4 /* Sources */ = {
@@ -143,28 +459,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE9897F81FB00241005986F4 /* ViewController.m in Sources */,
+				FE9898211FB002C4005986F4 /* MessageViewController.m in Sources */,
+				FE9898481FB010F6005986F4 /* UIImage+JTSImageEffects.m in Sources */,
+				FE9898281FB002C4005986F4 /* MessageListViewController.m in Sources */,
 				FE9898031FB00241005986F4 /* main.m in Sources */,
+				FE9898431FB010F6005986F4 /* JTSAnimatedGIFUtility.m in Sources */,
+				FE98982F1FB007B8005986F4 /* User.m in Sources */,
+				FE9898221FB002C4005986F4 /* MessageDateSectionController.m in Sources */,
+				FE9898241FB002C4005986F4 /* MessageImageCell.m in Sources */,
+				FE9898291FB002C4005986F4 /* MessageImageSectionController.m in Sources */,
+				FE98986F1FB014F0005986F4 /* SVWebViewControllerActivityChrome.m in Sources */,
+				FE9898731FB014F0005986F4 /* SVWebViewControllerActivitySafari.m in Sources */,
+				FE9898201FB002C4005986F4 /* MessageTextCell.m in Sources */,
+				FE9898351FB00F7C005986F4 /* Message.m in Sources */,
+				FE9898441FB010F6005986F4 /* JTSImageInfo.m in Sources */,
+				FE9898321FB00A0C005986F4 /* UIColor+MENU.m in Sources */,
+				FE9898471FB010F6005986F4 /* UIApplication+JTSImageViewController.m in Sources */,
+				FE9898751FB014F0005986F4 /* SVWebViewControllerActivity.m in Sources */,
+				FE98982A1FB002C4005986F4 /* MessageListViewCell.m in Sources */,
+				FE9898251FB002C4005986F4 /* MessageTextSectionController.m in Sources */,
+				FE9898451FB010F6005986F4 /* JTSImageViewController.m in Sources */,
 				FE9897F51FB00241005986F4 /* AppDelegate.m in Sources */,
+				FE98986A1FB014F0005986F4 /* SVModalWebViewController.m in Sources */,
+				FE9898261FB002C4005986F4 /* MessageInfo.m in Sources */,
+				FE9898461FB010F6005986F4 /* JTSSimpleImageDownloader.m in Sources */,
+				FE98986C1FB014F0005986F4 /* SVWebViewController.m in Sources */,
+				FE98982B1FB002C4005986F4 /* MessageDateCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE9897F91FB00241005986F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE9897FA1FB00241005986F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FE9897FF1FB00241005986F4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FE98984A1FB014F0005986F4 /* SVWebViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE98984B1FB014F0005986F4 /* da */,
+				FE98984C1FB014F0005986F4 /* de */,
+				FE98984D1FB014F0005986F4 /* en */,
+				FE98984E1FB014F0005986F4 /* es-ES */,
+				FE98984F1FB014F0005986F4 /* es */,
+				FE9898501FB014F0005986F4 /* fr */,
+				FE9898511FB014F0005986F4 /* ja */,
+				FE9898521FB014F0005986F4 /* pt */,
+				FE9898671FB014F0005986F4 /* zh-Hans */,
+				FE9898681FB014F0005986F4 /* zh-Hant */,
+			);
+			name = SVWebViewController.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -276,11 +625,13 @@
 		};
 		FE9898071FB00241005986F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A63356E2439F83E69318D9 /* Pods-Miemiefish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JJ3YTX5MV;
 				INFOPLIST_FILE = Miemiefish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yangmie.Miemiefish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,11 +641,13 @@
 		};
 		FE9898081FB00241005986F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901490995E7825D941A40456 /* Pods-Miemiefish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2JJ3YTX5MV;
 				INFOPLIST_FILE = Miemiefish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yangmie.Miemiefish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
