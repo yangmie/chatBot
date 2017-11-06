@@ -203,8 +203,10 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         return;
     }
 
+    NSString *meesageString = self.textView.text;
+
     User *miemiefish = [[User alloc] initWithUserName:@"miemiefish" image:@"miemiefish.jpg"];
-    Message *message = [[Message alloc] initWithMessage:self.textView.text user:miemiefish];
+    Message *message = [[Message alloc] initWithMessage:meesageString user:miemiefish];
     MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
     [self.messages addObject:mInfo];
 
@@ -212,7 +214,7 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         if (finished) {
             [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
 
-            [self sendAutuReply];
+            [self sendAutuReply:meesageString];
         }
     }];
 
@@ -228,12 +230,20 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
     [self.sendButton setTitleColor:[UIColor colorWithHex:0x333333 alpha:0.5] forState:UIControlStateHighlighted];
 }
 
-- (void)sendAutuReply {
+- (void)sendAutuReply:(NSString *)message {
 
     [NSTimer scheduledTimerWithTimeInterval:1.f repeats:NO block:^(NSTimer * _Nonnull timer) {
-        Message *message = [[Message alloc] initWithMessage:@"敷衍回應" user:self.toUser];
-        MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
-        [self.messages addObject:mInfo];
+
+        id reply = [self generateReplyFromString:message];
+        if ([reply isKindOfClass:[UIImage class]]) {
+            Message *message = [[Message alloc] initWithImageFile:reply user:self.toUser];
+            MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+            [self.messages addObject:mInfo];
+        } else {
+            Message *message = [[Message alloc] initWithMessage:reply user:self.toUser];
+            MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
+            [self.messages addObject:mInfo];
+        }
 
         [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
             if (finished) {
@@ -241,6 +251,21 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
             }
         }];
     }];
+}
+
+- (id)generateReplyFromString:(NSString *)string {
+
+    if ([string containsString:@"阿胖"]) {
+        return [UIImage imageNamed:@"raku2.png"];
+    } else if ([string containsString:@"寶貝"] || [string containsString:@"阿咩"]) {
+        return [UIImage imageNamed:@"raku1.png"];
+    } else if ([string containsString:@"老公"] || [string containsString:@"腦瓜"]) {
+        return [UIImage imageNamed:@"raku3.png"];
+    } else if ([string containsString:@"老婆"] || [string containsString:@"腦皮"]) {
+        return [UIImage imageNamed:@"raku4.png"];
+    } else {
+        return @"結餘\n在幹嘛";
+    }
 }
 
 - (IBAction)photoButtonAction:(id)sender {
