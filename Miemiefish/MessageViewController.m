@@ -48,6 +48,8 @@
     backBtn.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem = backBtn;
 
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.adapter.collectionView = self.collectionView;
     self.adapter.dataSource = self;
     self.adapter.delegate = self;

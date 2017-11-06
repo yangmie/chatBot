@@ -25,6 +25,8 @@
     self.title = @"聊天列表";
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.tableView.tableFooterView = [UIView new];
     self.tableView.separatorInset = UIEdgeInsetsZero;
 
