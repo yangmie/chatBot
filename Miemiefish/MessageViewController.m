@@ -256,7 +256,7 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 
 - (id)generateReplyFromString:(NSString *)string {
 
-    if (self.messages.count > 10 && !self.finalMessage) {
+    if (self.messages.count > 100 && !self.finalMessage) {
         self.finalMessage = YES;
         return @"結餘, 想不到你可以跟機器人玩成這樣, 想必以後是不需要密我本人了, 請直接跟機器人對談即可 :)\n\n雖然寫個app這種事情根本就工程師老梗, 但是還沒有用過勢必要用一下\n\n今年就這樣堂堂邁入十週年, 所以卡片也是電子化, 外加可以隨時上傳新版更新卡片內容(但是這件事情理論上不會發生), 節能減碳愛地球, 484很簡單呢?\n\n話說要觸發這一段需要對話超過100則, 而且上一頁以後對話就都自動銷毀, 要再看一次這個簡直困難, 我猜你一定會先上一頁以後才發現對話居然都不見了, 然後又重新累積一次:)\n\n根據我對你的了解, 這一則一定會被截圖, 所以有些東西不能打出來的我也就不增加你修圖的麻煩了, 簡直貼心\n\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n";
     }
