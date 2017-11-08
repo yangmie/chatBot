@@ -11,7 +11,6 @@
 		FE9897F51FB00241005986F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F41FB00241005986F4 /* AppDelegate.m */; };
 		FE9897F81FB00241005986F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F71FB00241005986F4 /* ViewController.m */; };
 		FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9897FC1FB00241005986F4 /* Assets.xcassets */; };
-		FE9898001FB00241005986F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */; };
 		FE9898031FB00241005986F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898021FB00241005986F4 /* main.m */; };
 		FE9898201FB002C4005986F4 /* MessageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9898091FB002BF005986F4 /* MessageTextCell.m */; };
 		FE9898211FB002C4005986F4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98980B1FB002BF005986F4 /* MessageViewController.m */; };
@@ -50,7 +49,6 @@
 		FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE9898791FB01BB4005986F4 /* yangmie.jpg */; };
 		FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */; };
 		FE98987F1FB02836005986F4 /* UIImage+MENU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98987E1FB02836005986F4 /* UIImage+MENU.m */; };
-		FE9898841FB035AA005986F4 /* mie.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898831FB035AA005986F4 /* mie.png */; };
 		FE98989D1FB04D70005986F4 /* bird8.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98988D1FB04D6D005986F4 /* bird8.png */; };
 		FE98989E1FB04D70005986F4 /* bird7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE98988E1FB04D6D005986F4 /* bird7.png */; };
 		FE9898A01FB04D70005986F4 /* bird3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898901FB04D6E005986F4 /* bird3.png */; };
@@ -85,6 +83,9 @@
 		FE9898D61FB06892005986F4 /* cat10.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898CA1FB06890005986F4 /* cat10.png */; };
 		FE9898D71FB06892005986F4 /* cat1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898CB1FB06891005986F4 /* cat1.png */; };
 		FE9898D81FB06892005986F4 /* cat3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898CC1FB06891005986F4 /* cat3.png */; };
+		FE9898DA1FB2E603005986F4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9898D91FB2E603005986F4 /* Launch Screen.storyboard */; };
+		FE9898DE1FB2E947005986F4 /* mie.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898DD1FB2E946005986F4 /* mie.png */; };
+		FE9898E01FB2F13E005986F4 /* panda1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9898DF1FB2F13D005986F4 /* panda1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +98,6 @@
 		FE9897F61FB00241005986F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FE9897F71FB00241005986F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FE9897FC1FB00241005986F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE9897FF1FB00241005986F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE9898011FB00241005986F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9898021FB00241005986F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE9898091FB002BF005986F4 /* MessageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextCell.m; sourceTree = "<group>"; };
@@ -172,7 +172,6 @@
 		FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgMenutalkPhoto.png; sourceTree = "<group>"; };
 		FE98987D1FB02835005986F4 /* UIImage+MENU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MENU.h"; sourceTree = "<group>"; };
 		FE98987E1FB02836005986F4 /* UIImage+MENU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MENU.m"; sourceTree = "<group>"; };
-		FE9898831FB035AA005986F4 /* mie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mie.png; sourceTree = "<group>"; };
 		FE98988D1FB04D6D005986F4 /* bird8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird8.png; sourceTree = "<group>"; };
 		FE98988E1FB04D6D005986F4 /* bird7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird7.png; sourceTree = "<group>"; };
 		FE9898901FB04D6E005986F4 /* bird3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird3.png; sourceTree = "<group>"; };
@@ -207,6 +206,9 @@
 		FE9898CA1FB06890005986F4 /* cat10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat10.png; sourceTree = "<group>"; };
 		FE9898CB1FB06891005986F4 /* cat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat1.png; sourceTree = "<group>"; };
 		FE9898CC1FB06891005986F4 /* cat3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat3.png; sourceTree = "<group>"; };
+		FE9898D91FB2E603005986F4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FE9898DD1FB2E946005986F4 /* mie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mie.png; sourceTree = "<group>"; };
+		FE9898DF1FB2F13D005986F4 /* panda1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +265,8 @@
 			children = (
 				FE9898821FB033EA005986F4 /* library */,
 				FE9898781FB01BA5005986F4 /* Images */,
-				FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */,
 				FE98981A1FB002C2005986F4 /* MessageStoryboard.storyboard */,
+				FE9898D91FB2E603005986F4 /* Launch Screen.storyboard */,
 				FE9898151FB002C1005986F4 /* MessageListViewController.h */,
 				FE98981B1FB002C3005986F4 /* MessageListViewController.m */,
 				FE9898141FB002C1005986F4 /* MessageListViewCell.h */,
@@ -293,6 +295,7 @@
 				FE9897F41FB00241005986F4 /* AppDelegate.m */,
 				FE9897F61FB00241005986F4 /* ViewController.h */,
 				FE9897F71FB00241005986F4 /* ViewController.m */,
+				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
 				FE9898011FB00241005986F4 /* Info.plist */,
 				FE9898021FB00241005986F4 /* main.m */,
 			);
@@ -371,7 +374,7 @@
 		FE9898781FB01BA5005986F4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				FE9898831FB035AA005986F4 /* mie.png */,
+				FE9898DD1FB2E946005986F4 /* mie.png */,
 				FE9898791FB01BB4005986F4 /* yangmie.jpg */,
 				FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */,
 				FE9898981FB04D6F005986F4 /* bird10.png */,
@@ -408,7 +411,7 @@
 				FE9898CA1FB06890005986F4 /* cat10.png */,
 				FE9898C41FB0688F005986F4 /* cat11.png */,
 				FE9898C31FB0688F005986F4 /* cat12.png */,
-				FE9897FC1FB00241005986F4 /* Assets.xcassets */,
+				FE9898DF1FB2F13D005986F4 /* panda1.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -502,7 +505,6 @@
 				FE9898A81FB04D70005986F4 /* bird10.png in Resources */,
 				FE9898AB1FB04D70005986F4 /* bird2.png in Resources */,
 				FE9898B41FB04E8D005986F4 /* rabbit3.png in Resources */,
-				FE9898001FB00241005986F4 /* LaunchScreen.storyboard in Resources */,
 				FE9898A01FB04D70005986F4 /* bird3.png in Resources */,
 				FE9898D11FB06892005986F4 /* cat2.png in Resources */,
 				FE9898B71FB04E8D005986F4 /* rabbit2.png in Resources */,
@@ -519,6 +521,7 @@
 				FE9898A11FB04D70005986F4 /* bird9.png in Resources */,
 				FE9898A51FB04D70005986F4 /* bird4.png in Resources */,
 				FE9898A31FB04D70005986F4 /* bird6.png in Resources */,
+				FE9898DE1FB2E947005986F4 /* mie.png in Resources */,
 				FE9898C01FB04FB0005986F4 /* raku4.png in Resources */,
 				FE98989E1FB04D70005986F4 /* bird7.png in Resources */,
 				FE9898D21FB06892005986F4 /* cat6.png in Resources */,
@@ -527,11 +530,11 @@
 				FE9898D31FB06892005986F4 /* cat9.png in Resources */,
 				FE98986E1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				FE9898AC1FB04D70005986F4 /* bird5.png in Resources */,
+				FE9898E01FB2F13E005986F4 /* panda1.png in Resources */,
 				FE9898B31FB04E8D005986F4 /* rabbit6.png in Resources */,
 				FE98986B1FB014F0005986F4 /* SVWebViewController.bundle in Resources */,
 				FE9898A71FB04D70005986F4 /* bird12.png in Resources */,
 				FE9898701FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
-				FE9898841FB035AA005986F4 /* mie.png in Resources */,
 				FE98989D1FB04D70005986F4 /* bird8.png in Resources */,
 				FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */,
 				FE9898CE1FB06892005986F4 /* cat8.png in Resources */,
@@ -540,6 +543,7 @@
 				FE9898B81FB04E8D005986F4 /* rabbit4.png in Resources */,
 				FE9898D61FB06892005986F4 /* cat10.png in Resources */,
 				FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */,
+				FE9898DA1FB2E603005986F4 /* Launch Screen.storyboard in Resources */,
 				FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				FE9898B61FB04E8D005986F4 /* rabbit1.png in Resources */,
 				FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */,
@@ -650,14 +654,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE9897FE1FB00241005986F4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE9897FF1FB00241005986F4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		FE98984A1FB014F0005986F4 /* SVWebViewController.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

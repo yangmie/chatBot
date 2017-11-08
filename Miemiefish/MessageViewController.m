@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic) BOOL isLoading;
 @property (nonatomic) BOOL finalMessage;
+@property (nonatomic) BOOL isAsking;
 
 @end
 
@@ -233,9 +234,16 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
 
 - (void)sendAutuReply:(NSString *)message {
 
-    [NSTimer scheduledTimerWithTimeInterval:1.f repeats:NO block:^(NSTimer * _Nonnull timer) {
+    NSArray *replyMessages = [self generateReplyFromString:message];
+    [self sendReplyMessages:[replyMessages mutableCopy]];
+}
 
-        id reply = [self generateReplyFromString:message];
+- (void)sendReplyMessages:(NSMutableArray *)messages {
+    if (messages.count == 0) {
+        return;
+    }
+    [NSTimer scheduledTimerWithTimeInterval:0.6f repeats:NO block:^(NSTimer * _Nonnull timer) {
+        id reply = [messages firstObject];
         if ([reply isKindOfClass:[UIImage class]]) {
             Message *message = [[Message alloc] initWithImageFile:reply user:self.toUser];
             MessageInfo *mInfo = [[MessageInfo alloc] initWithMessage:message];
@@ -249,60 +257,79 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         [self.adapter performUpdatesAnimated:YES completion:^(BOOL finished) {
             if (finished) {
                 [self.adapter scrollToObject:[self.messages lastObject] supplementaryKinds:nil scrollDirection:UICollectionViewScrollDirectionVertical scrollPosition:UICollectionViewScrollPositionTop animated:NO];
+                [messages removeObjectAtIndex:0];
+                [self sendReplyMessages:messages];
             }
         }];
     }];
+
 }
 
-- (id)generateReplyFromString:(NSString *)string {
+- (NSArray *)generateReplyFromString:(NSString *)string {
 
     if (self.messages.count > 100 && !self.finalMessage) {
         self.finalMessage = YES;
-        return @"結餘, 想不到你可以跟機器人玩成這樣, 想必以後是不需要密我本人了, 請直接跟機器人對談即可 :)\n\n雖然寫個app這種事情根本就工程師老梗, 但是還沒有用過勢必要用一下\n\n今年就這樣堂堂邁入十週年, 所以卡片也是電子化, 外加可以隨時上傳新版更新卡片內容(但是這件事情理論上不會發生), 節能減碳愛地球, 484很簡單呢?\n\n話說要觸發這一段需要對話超過100則, 而且上一頁以後對話就都自動銷毀, 要再看一次這個簡直困難, 我猜你一定會先上一頁以後才發現對話居然都不見了, 然後又重新累積一次:)\n\n根據我對你的了解, 這一則一定會被截圖, 所以有些東西不能打出來的我也就不增加你修圖的麻煩了, 簡直貼心\n\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n";
+        return @[@"結餘, 想不到你可以跟機器人玩成這樣, 想必以後是不需要密我本人了, 請直接跟機器人對談即可 :)\n\n雖然寫個app這種事情根本就工程師老梗, 但是還沒有用過勢必要用一下\n\n今年就這樣堂堂邁入十週年, 所以卡片也是電子化, 外加可以隨時上傳新版更新卡片內容(但是這件事情理論上不會發生), 節能減碳愛地球, 484很簡單呢?\n\n話說要觸發這一段需要對話超過100則, 而且上一頁以後對話就都自動銷毀, 要再看一次這個簡直困難, 我猜你一定會先上一頁以後才發現對話居然都不見了, 然後又重新累積一次:)\n\n根據我對你的了解, 這一則一定會被截圖, 所以有些東西不能打出來的我也就不增加你修圖的麻煩了, 簡直貼心\n\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n"];
     }
 
-    if ([string containsString:@"阿胖"]) {
-        return [UIImage imageNamed:@"raku2.png"];
+    if ([string containsString:@"我是網紅"] && !self.isAsking) {
+        self.isAsking = YES;
+        return @[@"結餘", @"恭喜你啟動隱藏對話", @"接下來我會問你一個簡單的數學問題", @"準爆好了ㄇ?", @"100 - 13 = ?"];
+    } else if ([string containsString:@"87"] && self.isAsking) {
+        self.isAsking = NO;
+        return @[@"沒錯", @"你就是個87呢 :)", [UIImage imageNamed:@"rabbit5.png"], [UIImage imageNamed:@"cat9.png"]];
+    } else if (![string containsString:@"87"] && self.isAsking) {
+        return @[[UIImage imageNamed:@"cat3.png"], @"這樣也能答錯?", @"扯"];
+    } else if ([string containsString:@"阿胖"]) {
+        return @[[UIImage imageNamed:@"raku2.png"]];
     } else if ([string containsString:@"寶貝"] || [string containsString:@"阿咩"]) {
-        return [UIImage imageNamed:@"raku1.png"];
+        return @[[UIImage imageNamed:@"raku1.png"]];
     } else if ([string containsString:@"老公"] || [string containsString:@"腦瓜"]) {
-        return [UIImage imageNamed:@"raku3.png"];
+        return @[[UIImage imageNamed:@"raku3.png"]];
     } else if ([string containsString:@"老婆"] || [string containsString:@"腦皮"]) {
-        return [UIImage imageNamed:@"raku4.png"];
+        return @[[UIImage imageNamed:@"raku4.png"]];
     } else if ([string containsString:@"欸欸"]) {
-        return [UIImage imageNamed:@"bird11.png"];
+        return @[[UIImage imageNamed:@"bird11.png"], [UIImage imageNamed:@"bird11.png"]];
     } else if ([string containsString:@"欸"]) {
-        return [UIImage imageNamed:@"bird8.png"];
+        return @[[UIImage imageNamed:@"bird8.png"]];
     } else if ([string containsString:@"天阿"] || [string containsString:@"天啊"]) {
-        return [UIImage imageNamed:@"bird5.png"];
+        return @[[UIImage imageNamed:@"bird5.png"], [UIImage imageNamed:@"bird2.png"], [UIImage imageNamed:@"bird5.png"], [UIImage imageNamed:@"bird2.png"]];
     } else if ([string containsString:@"= ="]) {
-        return [UIImage imageNamed:@"rabbit3.png"];
-    } else if ([string containsString:@"慘"]) {
-        return [UIImage imageNamed:@"rabbit5.png"];
+        return @[[UIImage imageNamed:@"rabbit3.png"]];
+    } else if ([string containsString:@"慘"] || [string containsString:@"哭"]) {
+        return @[[UIImage imageNamed:@"rabbit5.png"]];
     } else if ([string containsString:@"在幹嘛"] || [string containsString:@"你在哪"]) {
-        return [UIImage imageNamed:@"bird10.png"];
-    } else if ([string containsString:@"我要去"]) {
-        return [UIImage imageNamed:@"bird3.png"];
+        return @[[UIImage imageNamed:@"bird10.png"]];
+    } else if ([string containsString:@"我要"]) {
+        return @[[UIImage imageNamed:@"bird3.png"], @"結餘", @"又在掰了"];
     } else if ([string containsString:@"瘋"]) {
-        return [UIImage imageNamed:@"bird9.png"];
-    } else if ([string containsString:@"崩潰"]) {
-        return [UIImage imageNamed:@"bird11.png"];
+        return @[[UIImage imageNamed:@"bird9.png"], [UIImage imageNamed:@"bird9.png"], [UIImage imageNamed:@"bird9.png"]];
+    } else if ([string containsString:@"崩潰"] || [string containsString:@"雷"]) {
+        return @[[UIImage imageNamed:@"bird11.png"], [UIImage imageNamed:@"bird11.png"], [UIImage imageNamed:@"bird11.png"]];
     } else if ([string containsString:@"==="]) {
-        return [UIImage imageNamed:@"bird1.png"];
+        return @[[UIImage imageNamed:@"bird1.png"]];
     } else if ([string containsString:@"我跟你說"]) {
-        return [UIImage imageNamed:@"bird7.png"];
+        return @[[UIImage imageNamed:@"bird7.png"], @"開始了"];
     } else if ([string containsString:@"生氣"]) {
-        return [UIImage imageNamed:@"bird4.png"];
+        return @[[UIImage imageNamed:@"bird4.png"]];
     } else if ([string containsString:@"睡"]) {
-        return [UIImage imageNamed:@"rabbit1.png"];
+        return @[[UIImage imageNamed:@"rabbit1.png"], [UIImage imageNamed:@"rabbit1.png"], [UIImage imageNamed:@"rabbit1.png"]];
+    } else if ([string containsString:@"晚安"]) {
+        return @[[UIImage imageNamed:@"rabbit6.png"], [UIImage imageNamed:@"rabbit2.png"], [UIImage imageNamed:@"raku3.png"], [UIImage imageNamed:@"raku2.png"], [UIImage imageNamed:@"raku1.png"]];
+    } else if ([string containsString:@"抱抱"]) {
+        return @[[UIImage imageNamed:@"panda1.png"], [UIImage imageNamed:@"panda1.png"], @"喝", [UIImage imageNamed:@"rabbit6.png"]];
+    } else if ([string containsString:@"你知道"]) {
+        return @[@"結餘", @"又在掰了"];
+    }  else if ([string containsString:@"audition"]) {
+        return @[@"11/23 北皇", @"12/12 trinity", @"12/16 RCM"];
     } else {
         int index = arc4random() % 2;
         if (index == 0) {
             NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png", @"cat1.png", @"cat2.png", @"cat3.png", @"cat4.png", @"cat5.png", @"cat6.png", @"cat7.png", @"cat8.png", @"cat9.png", @"cat10.png", @"cat11.png", @"cat12.png"];
             int imageIndex = arc4random() % imageArray.count;
-            return [UIImage imageNamed:imageArray[imageIndex]];
+            return @[[UIImage imageNamed:imageArray[imageIndex]]];
         } else {
-            NSArray *stringArray = @[@"結餘\n在幹嘛", @"活該", @"可ㄆ", @"結餘 是不是在搞", @"抓到", @"已經沒有那個必要了", @"跟你媽講", @"離ㄆ", @"扯", @"😯", @"喝", @"不行", @"蛤", @"zz", @"不好ㄅ", @"結餘 他媽為什麼還不去睡", @"練琴囉", @"...", @"慘"];
+            NSArray *stringArray = @[@[@"結餘", @"在幹嘛"], @[@"結餘", @"活該"], @[@"可ㄆ"], @[@"結餘", @"是不是在搞"], @[@"抓到", [UIImage imageNamed:@"cat4.png"]], @[@"已經沒有那個必要了"], @[@"跟你媽講"], @[@"離ㄆ"], @[@"扯"], @[@"😯"], @[@"喝"], @[@"不行"], @[@"蛤"], @[@"zz"], @[@"不好ㄅ"], @[@"結餘", @"他媽為什麼還不去睡"], @[@"結餘", @"練琴囉"], @[@"..."], @[@"慘", @"被你搞"], @[@"被你搞"]];
             int imageIndex = arc4random() % stringArray.count;
             return stringArray[imageIndex];
         }
