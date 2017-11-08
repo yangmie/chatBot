@@ -43,7 +43,7 @@
 
     CGSize size = [textView sizeThatFits:CGSizeMake(CGRectGetWidth(textView.frame), MAXFLOAT)];
 
-    return CGSizeMake(self.collectionContext.containerSize.width, size.height + 20.f);
+    return CGSizeMake(self.collectionContext.containerSize.width, size.height + 24.f*mainRatio);
 }
 
 - (UICollectionViewCell *)cellForItemAtIndex:(NSInteger)index {
