@@ -271,10 +271,12 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
         self.finalMessage = YES;
         return @[@"結餘, 想不到你可以跟機器人玩成這樣, 想必以後是不需要密我本人了, 請直接跟機器人對談即可 :)\n\n雖然寫個app這種事情根本就工程師老梗, 但是還沒有用過勢必要用一下\n\n今年就這樣堂堂邁入十週年, 所以卡片也是電子化, 外加可以隨時上傳新版更新卡片內容(但是這件事情理論上不會發生), 節能減碳愛地球, 484很簡單呢?\n\n話說要觸發這一段需要對話超過100則, 而且上一頁以後對話就都自動銷毀, 要再看一次這個簡直困難, 我猜你一定會先上一頁以後才發現對話居然都不見了, 然後又重新累積一次:)\n\n根據我對你的了解, 這一則一定會被截圖, 所以有些東西不能打出來的我也就不增加你修圖的麻煩了, 簡直貼心\n\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n28歲生日快樂:)\n"];
     }
-
-    if ([string containsString:@"我是網紅"] && !self.isAsking) {
+    
+    if ([string containsString:@"寶貝你好帥"]) {
+        return @[[UIImage imageNamed:@"panda6.png"], [UIImage imageNamed:@"panda7.png"], [UIImage imageNamed:@"panda10.png"], [UIImage imageNamed:@"panda8.png"], [UIImage imageNamed:@"panda1.png"], [UIImage imageNamed:@"panda9.png"], [UIImage imageNamed:@"panda2.png"], [UIImage imageNamed:@"panda3.png"], [UIImage imageNamed:@"panda4.png"]];
+    } else if ([string containsString:@"我是網紅"] && !self.isAsking) {
         self.isAsking = YES;
-        return @[@"結餘", @"恭喜你啟動隱藏對話", @"接下來我會問你一個簡單的數學問題", @"準爆好了ㄇ?", @"100 - 13 = ?"];
+        return @[@"結餘", @"恭喜你啟動隱藏對話", @"接下來我會問你一個簡單的數學問題", @"準備好了ㄇ?", @"100 - 13 = ?"];
     } else if ([string containsString:@"87"] && self.isAsking) {
         self.isAsking = NO;
         return @[@"沒錯", @"你就是個87呢 :)", [UIImage imageNamed:@"rabbit5.png"], [UIImage imageNamed:@"cat9.png"]];
@@ -325,7 +327,7 @@ NSInteger recentMessagesSort(MessageInfo *message1, MessageInfo *message2, void 
     } else {
         int index = arc4random() % 2;
         if (index == 0) {
-            NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png", @"cat1.png", @"cat2.png", @"cat3.png", @"cat4.png", @"cat5.png", @"cat6.png", @"cat7.png", @"cat8.png", @"cat9.png", @"cat10.png", @"cat11.png", @"cat12.png"];
+            NSArray *imageArray = @[@"bird1.png", @"bird2.png", @"bird3.png", @"bird4.png", @"bird5.png", @"bird6.png", @"bird7.png", @"bird8.png", @"rabbit6.png", @"rabbit1.png", @"rabbit2.png", @"rabbit3.png", @"rabbit4.png", @"rabbit5.png", @"cat1.png", @"cat2.png", @"cat3.png", @"cat4.png", @"cat5.png", @"cat6.png", @"cat7.png", @"cat8.png", @"cat9.png", @"cat10.png", @"cat11.png", @"cat12.png", @"panda3.png", @"panda4.png"];
             int imageIndex = arc4random() % imageArray.count;
             return @[[UIImage imageNamed:imageArray[imageIndex]]];
         } else {

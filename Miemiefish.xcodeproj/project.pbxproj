@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E4F6495FF56F5C60B352D4E6 /* libPods-Miemiefish.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F45900EF2B90B9086A7E5 /* libPods-Miemiefish.a */; };
+		FE5EAC081FB3A22500F599F8 /* panda4.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EABFF1FB3A22300F599F8 /* panda4.png */; };
+		FE5EAC091FB3A22500F599F8 /* panda7.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC001FB3A22300F599F8 /* panda7.png */; };
+		FE5EAC0A1FB3A22500F599F8 /* panda6.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC011FB3A22400F599F8 /* panda6.png */; };
+		FE5EAC0B1FB3A22500F599F8 /* panda3.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC021FB3A22400F599F8 /* panda3.png */; };
+		FE5EAC0C1FB3A22500F599F8 /* panda10.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC031FB3A22400F599F8 /* panda10.png */; };
+		FE5EAC0D1FB3A22500F599F8 /* panda2.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC041FB3A22500F599F8 /* panda2.png */; };
+		FE5EAC0E1FB3A22500F599F8 /* panda5.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC051FB3A22500F599F8 /* panda5.png */; };
+		FE5EAC0F1FB3A22500F599F8 /* panda8.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC061FB3A22500F599F8 /* panda8.png */; };
+		FE5EAC101FB3A22500F599F8 /* panda9.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5EAC071FB3A22500F599F8 /* panda9.png */; };
 		FE9897F51FB00241005986F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F41FB00241005986F4 /* AppDelegate.m */; };
 		FE9897F81FB00241005986F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9897F71FB00241005986F4 /* ViewController.m */; };
 		FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9897FC1FB00241005986F4 /* Assets.xcassets */; };
@@ -92,6 +101,15 @@
 		901490995E7825D941A40456 /* Pods-Miemiefish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miemiefish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish.release.xcconfig"; sourceTree = "<group>"; };
 		A6A63356E2439F83E69318D9 /* Pods-Miemiefish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Miemiefish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Miemiefish/Pods-Miemiefish.debug.xcconfig"; sourceTree = "<group>"; };
 		DF0F45900EF2B90B9086A7E5 /* libPods-Miemiefish.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Miemiefish.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5EABFF1FB3A22300F599F8 /* panda4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda4.png; sourceTree = "<group>"; };
+		FE5EAC001FB3A22300F599F8 /* panda7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda7.png; sourceTree = "<group>"; };
+		FE5EAC011FB3A22400F599F8 /* panda6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda6.png; sourceTree = "<group>"; };
+		FE5EAC021FB3A22400F599F8 /* panda3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda3.png; sourceTree = "<group>"; };
+		FE5EAC031FB3A22400F599F8 /* panda10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda10.png; sourceTree = "<group>"; };
+		FE5EAC041FB3A22500F599F8 /* panda2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda2.png; sourceTree = "<group>"; };
+		FE5EAC051FB3A22500F599F8 /* panda5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda5.png; sourceTree = "<group>"; };
+		FE5EAC061FB3A22500F599F8 /* panda8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda8.png; sourceTree = "<group>"; };
+		FE5EAC071FB3A22500F599F8 /* panda9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panda9.png; sourceTree = "<group>"; };
 		FE9897F01FB00241005986F4 /* Miemiefish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Miemiefish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9897F31FB00241005986F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FE9897F41FB00241005986F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -374,6 +392,16 @@
 		FE9898781FB01BA5005986F4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FE9898DF1FB2F13D005986F4 /* panda1.png */,
+				FE5EAC041FB3A22500F599F8 /* panda2.png */,
+				FE5EAC021FB3A22400F599F8 /* panda3.png */,
+				FE5EABFF1FB3A22300F599F8 /* panda4.png */,
+				FE5EAC051FB3A22500F599F8 /* panda5.png */,
+				FE5EAC011FB3A22400F599F8 /* panda6.png */,
+				FE5EAC001FB3A22300F599F8 /* panda7.png */,
+				FE5EAC061FB3A22500F599F8 /* panda8.png */,
+				FE5EAC071FB3A22500F599F8 /* panda9.png */,
+				FE5EAC031FB3A22400F599F8 /* panda10.png */,
 				FE9898DD1FB2E946005986F4 /* mie.png */,
 				FE9898791FB01BB4005986F4 /* yangmie.jpg */,
 				FE98987B1FB021B0005986F4 /* imgMenutalkPhoto.png */,
@@ -411,7 +439,6 @@
 				FE9898CA1FB06890005986F4 /* cat10.png */,
 				FE9898C41FB0688F005986F4 /* cat11.png */,
 				FE9898C31FB0688F005986F4 /* cat12.png */,
-				FE9898DF1FB2F13D005986F4 /* panda1.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -507,7 +534,9 @@
 				FE9898B41FB04E8D005986F4 /* rabbit3.png in Resources */,
 				FE9898A01FB04D70005986F4 /* bird3.png in Resources */,
 				FE9898D11FB06892005986F4 /* cat2.png in Resources */,
+				FE5EAC0B1FB3A22500F599F8 /* panda3.png in Resources */,
 				FE9898B71FB04E8D005986F4 /* rabbit2.png in Resources */,
+				FE5EAC0C1FB3A22500F599F8 /* panda10.png in Resources */,
 				FE9898BD1FB04FB0005986F4 /* raku2.png in Resources */,
 				FE9898BE1FB04FB0005986F4 /* raku1.png in Resources */,
 				FE9898D51FB06892005986F4 /* cat4.png in Resources */,
@@ -518,6 +547,7 @@
 				FE9898721FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 				FE9898B51FB04E8D005986F4 /* rabbit5.png in Resources */,
 				FE9898A91FB04D70005986F4 /* bird11.png in Resources */,
+				FE5EAC101FB3A22500F599F8 /* panda9.png in Resources */,
 				FE9898A11FB04D70005986F4 /* bird9.png in Resources */,
 				FE9898A51FB04D70005986F4 /* bird4.png in Resources */,
 				FE9898A31FB04D70005986F4 /* bird6.png in Resources */,
@@ -526,6 +556,7 @@
 				FE98989E1FB04D70005986F4 /* bird7.png in Resources */,
 				FE9898D21FB06892005986F4 /* cat6.png in Resources */,
 				FE9898741FB014F0005986F4 /* SVWebViewControllerActivitySafari@2x.png in Resources */,
+				FE5EAC091FB3A22500F599F8 /* panda7.png in Resources */,
 				FE9898D71FB06892005986F4 /* cat1.png in Resources */,
 				FE9898D31FB06892005986F4 /* cat9.png in Resources */,
 				FE98986E1FB014F0005986F4 /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
@@ -535,7 +566,10 @@
 				FE98986B1FB014F0005986F4 /* SVWebViewController.bundle in Resources */,
 				FE9898A71FB04D70005986F4 /* bird12.png in Resources */,
 				FE9898701FB014F0005986F4 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
+				FE5EAC081FB3A22500F599F8 /* panda4.png in Resources */,
 				FE98989D1FB04D70005986F4 /* bird8.png in Resources */,
+				FE5EAC0F1FB3A22500F599F8 /* panda8.png in Resources */,
+				FE5EAC0D1FB3A22500F599F8 /* panda2.png in Resources */,
 				FE9897FD1FB00241005986F4 /* Assets.xcassets in Resources */,
 				FE9898CE1FB06892005986F4 /* cat8.png in Resources */,
 				FE9898D81FB06892005986F4 /* cat3.png in Resources */,
@@ -545,9 +579,11 @@
 				FE98987A1FB01BB4005986F4 /* yangmie.jpg in Resources */,
 				FE9898DA1FB2E603005986F4 /* Launch Screen.storyboard in Resources */,
 				FE9898711FB014F0005986F4 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
+				FE5EAC0A1FB3A22500F599F8 /* panda6.png in Resources */,
 				FE9898B61FB04E8D005986F4 /* rabbit1.png in Resources */,
 				FE98987C1FB021B0005986F4 /* imgMenutalkPhoto.png in Resources */,
 				FE9898D01FB06892005986F4 /* cat11.png in Resources */,
+				FE5EAC0E1FB3A22500F599F8 /* panda5.png in Resources */,
 				FE9898CD1FB06892005986F4 /* cat7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
